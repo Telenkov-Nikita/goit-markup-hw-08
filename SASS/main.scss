@@ -1,0 +1,20 @@
+// utils
+@import "./utils/_variables";
+@import "./utils/_visually-hidden";
+
+// base
+@import "./base/_common.scss";
+@import "./base/_container.scss";
+
+// layout
+@import "./layout/_advantages.scss";
+@import "./layout/_btns.scss";
+@import "./layout/_first-block.scss";
+@import "./layout/_footer.scss";
+@import "./layout/_header.scss";
+@import "./layout/_portfolio.scss";
+@import "./layout/_team.scss";
+@import "./layout/_what-we-do.scss";
+
+// components
+@import "./components/_h2.scss";

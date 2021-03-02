@@ -1,0 +1,22 @@
+.whatWeDo-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.whatWeDo .container {
+  padding-bottom: 94px;
+}
+.whatWeDo-relative {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 370px;
+  height: 70px;
+  text-transform: uppercase;
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 14px;
+}
