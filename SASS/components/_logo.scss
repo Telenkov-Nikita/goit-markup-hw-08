@@ -1,6 +1,38 @@
+%whole-logo {
+  @extend %link;
+  font-family: $logo-font;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.174;
+  letter-spacing: 0.03em;
+  padding: 16px 0;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 1.173;
+  }
+}
+
 .logo {
-  font-family: raleway;
-  font-size: 26px;
-  font-weight: 700;
-  margin-right: 93px;
+  @extend %whole-logo;
+  color: $accent-color;
+  display: inline-block;
+}
+
+.logo-secondary {
+  @extend %whole-logo;
+  color: $title-text-color;
+}
+// .logo-secondary-footer
+.logo-secondary-footer {
+  @extend %whole-logo;
+  color: $primary-white-color;
+}
+.footer-logo {
+  @extend %whole-logo;
+  display: inline-block;
+  color: $accent-color;
+  margin-bottom: 20px;
+  padding-top: 0;
+  padding-bottom: 0;
 }

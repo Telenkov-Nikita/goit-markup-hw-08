@@ -1,10 +1,31 @@
-:root {
-  --accent-color: #2196f3;
-  --white-color: #ffffff;
-  --bg-color: #f5f4fa;
-  --block-bg-color: #2f303a;
-  --light-text-color: #757575;
-  --text-color: #212121;
-  --card-set-gap: 30px;
-  --links-color: #afb1b8;
-}
+//Colors
+$primary-text-color: #757575;
+$title-text-color: #212121;
+$accent-color: rgb(32, 148, 243);
+$primary-white-color: #ffffff;
+$footer-heroy-background-color: #2f303a;
+$background-komandy: #f5f4fa;
+$color-link-footer: rgba(255, 255, 255, 0.6);
+$icon-color: #afb1b8;
+$bg-overlay-card: rgba(33, 150, 243, 0.9);
+$color-header-border: #ececec;
+$placeholder-form-send-color: rgba(255, 255, 255, 0.6);
+$placeholder-form-modal-color: rgba(117, 117, 117, 0.5);
+$background-backdrop-color: rgba(0, 0, 0, 0.2);
+//animation
+$time: 250ms;
+$animation-function: cubic-bezier(0.4, 0, 0.2, 1);
+//font
+$body-font: Roboto, sans-serif;
+$logo-font: Raleway, sans-serif;
+$font-size-logo: 26px;
+$body-font-size: 14px;
+$section-title-size: 36px;
+$button-font-size: 16px;
+//@at-root
+$max-width: 1600px;
+$container-width: 1200px;
+$border-radius: 4px;
+//indent section
+$padding-top-section: 94px;
+$padding-bottom-section: 94px;

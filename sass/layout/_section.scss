@@ -1,0 +1,31 @@
+.section {
+  background-color: $primary-white-color;
+  @media screen and (max-width: 1199px) {
+    @include section-padding(80px, 80px);
+  }
+  @media screen and (max-width: 767px) {
+    @include section-padding(60px, 60px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include section-padding();
+  }
+
+  &-top {
+    @include section-padding(0);
+  }
+
+  &-team {
+    background-color: $background-komandy;
+    @media screen and (max-width: 1199px) {
+      @include section-padding(80px, 80px);
+    }
+    @media screen and (max-width: 767px) {
+      @include section-padding(60px, 60px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      @include section-padding();
+    }
+  }
+}

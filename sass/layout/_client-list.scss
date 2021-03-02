@@ -1,0 +1,51 @@
+.client-list {
+  @extend %list;
+  display: flex;
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+.client-list__item {
+  width: 170px;
+  height: 90px;
+  width: calc((100% - 60px) / 2);
+
+  @media screen and (max-width: 1199px) {
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 90px) / 3);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
+
+  &:not(:last-child) {
+    @media screen and (min-width: $desktop) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.client-list__links {
+  @include centered-flex();
+  @extend %link;
+  color: $icon-color;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  border-color: $icon-color;
+  border: 1px solid $icon-color;
+  border-radius: 4px;
+
+  transition: fill $time $animation-function,
+    background-color $time $animation-function;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    border-color: $accent-color;
+  }
+}

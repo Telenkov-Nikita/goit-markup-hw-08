@@ -1,0 +1,19 @@
+.modal-window__close {
+  @include centered-flex();
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $primary-white-color;
+  transition: fill $time $animation-function;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}

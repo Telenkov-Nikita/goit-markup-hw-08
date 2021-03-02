@@ -1,95 +1,136 @@
-.active {
-  position: relative;
-  color: var(--accent-color);
+.page-header {
+  background-color: $primary-white-color;
+  margin-bottom: 0%;
 }
-.active::after {
+.portfolio-header {
+  border-bottom: 1px solid $color-header-border;
+}
+.button-dropdown,
+.dropdown-close-btn {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+.dropdown-close-btn {
   position: absolute;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--accent-color);
-  content: "";
-  margin-top: 28px;
+  top: 10px;
+  right: 15px;
+}
+.dropdown-menu {
+  background-color: $primary-white-color;
+  // max-width: 480px;
+  height: 100vh;
+  width: 100vw;
+  padding: 48px 40px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  z-index: 23;
+
+  transition: transform 500ms linear;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+.dropdown-menu.is-open {
+  transform: translateX(-50%) translateY(0);
 }
 
-.web {
-  font-family: raleway;
-  font-size: 26px;
-  color: var(--accent-color);
+.dropdown-menu-nav,
+.dropdown-menu-contacts,
+.dropdown-menu-social-links {
+  @extend %list;
+}
+.dropdown-menu-nav__link,
+.dropdown-menu-contacts__link,
+.dropdown-menu-social-links__link {
+  @extend %link;
 }
 
-li > a:hover,
-li > a:focus {
-  color: var(--accent-color);
+.burger-icon,
+.close-icon {
+  width: 40px;
+  height: 40px;
 }
-.nav-list-address .header-contact {
-  color: var(--light-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.dropdown-menu-nav {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: $title-text-color;
 }
-.header-contact:hover,
-.header-contact:focus {
-  color: var(--accent-color);
+.dropdown-menu-nav__item:not(:last-child) {
+  margin-bottom: 35px;
 }
-
-.header-contact > svg {
-  margin-right: 10px;
-  width: 16px;
-  height: 12px;
-  fill: var(--light-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-contact .svg {
-  margin-right: 10px;
-  width: 10px;
-  height: 16px;
-  fill: var(--light-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.dropdown-menu-nav__link {
+  color: $title-text-color;
+  &.current {
+    color: $accent-color;
+  }
 }
 
-.header-contact:hover > svg,
-.header-contact:focus > svg {
-  fill: var(--accent-color);
-}
+.dropdown-menu-contacts__link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.166;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
 
-.header-contact {
+  &.tel {
+    font-size: 34px;
+    line-height: 1.176;
+    color: $accent-color;
+  }
+}
+.dropdown-menu-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.dropdown-menu-social-links {
   display: flex;
-  align-items: center;
-  color: var(--light-text-color);
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.171;
+  letter-spacing: 0.02em;
+  margin-left: -10px;
+  margin-right: -10px;
+  color: $accent-color;
 
-header .container {
+  @media screen and(min-width:320px) {
+    display: flex;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    margin-left: -10px;
+    margin-right: -10px;
+    color: $accent-color;
+  }
+}
+.dropdown-menu-social-links__link {
+  color: $accent-color;
+}
+.dropdown-menu-social-links__item {
+  padding: 0 10px;
+
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+.dropdown-wraper {
   display: flex;
-  align-items: center;
-}
-.nav-list-item > a {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.nav-item {
-  display: flex;
-  align-items: center;
-}
-.nav-list {
-  display: flex;
-  align-items: center;
-}
-.address {
-  margin-left: auto;
-}
-
-.nav-list-address:not(:first-child) {
-  margin-left: 50px;
-}
-
-.nav-list-item:not(:last-child) {
-  margin-right: 50px;
-}
-
-header {
-  border-bottom: 1px solid #ececec;
+  flex-direction: column;
+  justify-content: space-between;
+  // margin: auto;
+  height: 100%;
 }
