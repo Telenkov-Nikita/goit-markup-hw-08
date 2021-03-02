@@ -84,9 +84,32 @@
     <div class="container">
         <h2>Чем мы занимаемся</h2>
     <ul class="whatWeDo-list">
-        <li class="whatWeDo-item"><img src="./img/img1.png" alt="человек печатает на клавиатуре"><div class="whatWeDo-relative"><p>десктопные приложения</p></div></li>
-        <li class="whatWeDo-item"><img src="./img/img2.png" alt="человек использует смартфон"><div class="whatWeDo-relative"><p>мобильные приложения</p></div></li>
-        <li class="whatWeDo-item"><img src="./img/img3.png" alt="человек использует планшет"><div class="whatWeDo-relative"><p>дизайнерские решения</p></div></li>
+        <li class="whatWeDo-item">
+            <picture>
+            <source srcset="./img/img1.webp 1x, ./img/img1@2x.webp 2x"
+                media="(min-width: 1200px)" type="image/webp">
+            <source srcset="./img/img1.png 1x, ./img/img1@2x.jpg 2x"
+                media="(min-width: 1200px)">
+
+            <img src="./img/img1.png" alt="человек печатает на клавиатуре">
+            </picture>
+        <div class="whatWeDo-relative"><p>десктопные приложения</p></div></li>
+        <li class="whatWeDo-item">
+                        <picture>
+                            <source srcset="./img/img2.webp 1x, ./img/img2@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./img/img2.png 1x, ./img/img2@2x.jpg 2x" media="(min-width: 1200px)">
+
+                        <img src="./img/img2.png" alt="человек использует смартфон">
+                        </picture>
+            <div class="whatWeDo-relative"><p>мобильные приложения</p></div></li>
+        <li class="whatWeDo-item">
+                        <picture>
+                            <source srcset="./img/img3.webp 1x, ./img/img3@2x.webp 2x" media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./img/img3.png 1x, ./img/img3@2x.jpg 2x" media="(min-width: 1200px)">
+
+                        <img src="./img/img3.png" alt="человек использует планшет">
+                        </picture>
+            <div class="whatWeDo-relative"><p>дизайнерские решения</p></div></li>
     </ul></div>
 
 </section>
